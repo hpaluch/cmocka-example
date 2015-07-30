@@ -29,4 +29,7 @@ To just run example (without mock/tests):
 
 	make run
 
+To run CMocka test
+
+	make test_mocka
 
