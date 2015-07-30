@@ -1,0 +1,6 @@
+example
+test
+*.o
+*~
+*.swp
+
