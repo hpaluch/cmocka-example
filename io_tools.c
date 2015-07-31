@@ -6,7 +6,7 @@
 #include<unistd.h>
 
 ssize_t io_tools_write(int fd, const void *buf, size_t count){
-	int n;
+	int n=0;
 	size_t remainder = count ;
 
 	while ( remainder > 0
@@ -19,7 +19,7 @@ ssize_t io_tools_write(int fd, const void *buf, size_t count){
 	return count;
 }
 ssize_t io_tools_read(int fd, void *buf, size_t count){
-	int n;
+	int n=0;
 	size_t remainder = count;
 
 	while ( remainder > 0
