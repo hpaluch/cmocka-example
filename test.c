@@ -24,12 +24,17 @@ ssize_t __wrap_write(int fd, const void *buf, size_t count){
 
 ssize_t __wrap_read(int fd, const void *buf, size_t count){
 	ssize_t n;
+	char *read_data;
 
 	check_expected(fd);
 	check_expected_ptr(buf);
 	check_expected(count);
 
-	strcpy((char*)buf, mock_type(char*));
+	read_data = mock_type(char*);
+	// check for possible buffer overflows
+	assert_in_range(strlen(read_data),1,count);
+	// NOTE: real buf must have size + 1 for terminating '\0' char!!!
+	strcpy((char*)buf, read_data );
 
 	n=mock_type(ssize_t);
 //	printf("read: n=%d fd=%d,buf=%s,count=%u\n",(int)n,fd,(char*)buf,(unsigned)count);
