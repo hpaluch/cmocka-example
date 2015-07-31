@@ -2,7 +2,7 @@
 CFLAGS  = -Wall -g
 LDFLAGS = -g
 LDLIBS_CMOCKA = -lcmocka
-LDFLAGS_CMOCKA = -Wl,--wrap=write
+LDFLAGS_CMOCKA = -Wl,--wrap=write -Wl,--wrap=read
 
 all : example test
 
