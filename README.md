@@ -1,9 +1,6 @@
 CMocka example - simple io_tools library
 ========================================
 
-WARNING! It does not work yet!!!
-
-
 Here is an example how to mock write(2) and read(2) calls to
 verify proper function of local io_tools library (that 
 uses such functions)
