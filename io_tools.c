@@ -5,7 +5,7 @@
  */
 #include<unistd.h>
 
-size_t io_tools_write(int fd, const void *buf, size_t count){
+ssize_t io_tools_write(int fd, const void *buf, size_t count){
 	int n;
 	size_t remainder = count ;
 

@@ -10,7 +10,7 @@
 
 #include "io_tools.h"
 
-size_t __wrap_write(int fd, const void *buf, size_t count){
+ssize_t __wrap_write(int fd, const void *buf, size_t count){
 	int n;
 
 	check_expected(fd);
@@ -19,7 +19,7 @@ size_t __wrap_write(int fd, const void *buf, size_t count){
 
 
 	n=mock_type(int);
-	printf("n=%d fd=%d,buf=%s,count=%d\n",n,fd,buf,count);
+//	printf("n=%d fd=%d,buf=%s,count=%d\n",n,fd,buf,count);
 	return n;
 	
 
