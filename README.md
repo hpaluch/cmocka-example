@@ -3,7 +3,7 @@ CMocka example - simple io_tools library
 
 Here is an example how to mock write(2) and read(2) calls to
 verify proper function of local io_tools library (that 
-uses such functions)
+uses such functions). It uses [CMocka](https://cmocka.org/) library.
 
 Setup
 -----
@@ -29,4 +29,10 @@ To just run example (without mock/tests):
 To run CMocka test
 
 	make test_mocka
+
+Resources
+---------
+
+* https://cmocka.org/ - CMocka homepage
+* https://lwn.net/Articles/558106/ - CMocka tutorial
 
